@@ -1,75 +1,31 @@
-# React + TypeScript + Vite
+# 오늘의 메모
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 이 컴퓨터에서 사용하는 패키지 저장소
+- 로컬 저장소 : 이 프로젝트에 국한되어 사용되는 패키지들이 저장되는 장소
+  - node_modules
 
-Currently, two official plugins are available:
+- 글로벌 저장소 : 내 컴퓨터 전역(global)에서 사용할 수 있는 패키지들이 저장되는 장소 <br/>
+                (import 불가. 사용만 가능)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br/>
 
-## React Compiler
+pnpm -> 자바스크립트로 만들어진 패키지 <br/>
+사용하는 곳이 하나의 프로젝트에 국한되어져 있지 않음
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<br/>
 
-## Expanding the ESLint configuration
+vfox <== 언어에 국한되지 않고서 버전을 관리해주는 엔진 버전 관리 프로그램 <br/>
+node.js <== npm 패키지 관리자가 자동으로 설치됐음 <br/>
+            npm install -g pnpm (pnpm이 더 쓰기 편함)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+비밀번호는<br/>
+    1. 영어<br/>
+        - 대문자<br/>
+        - 소문자<br/>
+    2. 숫자<br/>
+    3. 특수문자<br/>
+<br/>
+    이 외의 한글, 일본어 등 "영어 이외의 글자"는 받지 말아야 함<br/>
+<br/>
+## 오늘의 메인 내용 : HTML 은 믿을 수 없다. 조건을 HTML로만 걸면 안된다.<br/>
+?? : 개발자도구에서 빼버리면 HTML 네가 뭘 할수 있지?
